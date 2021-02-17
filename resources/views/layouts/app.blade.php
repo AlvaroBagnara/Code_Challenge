@@ -28,8 +28,6 @@
         <main class="py-4">
             <div class="container-fluid">
                 <div class="row">
-                    <card-component></card-component>
-                    <example-component></example-component>
                     @yield('content')
                 </div>
             </div>

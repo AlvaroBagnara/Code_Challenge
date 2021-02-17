@@ -3,18 +3,13 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Home') }}</div>
+                <div class="card-header">{{'Nada'}}</div>
                 <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-                    @if (session('msg'))
+                    <!-- @if (session('msg'))
                         {{ session('msg')}}
                     @else
                         {{ __('Você está logado, Seja Bem-vindo!') }}
-                    @endif
+                    @endif -->
                 </div>
             </div>
         </div>

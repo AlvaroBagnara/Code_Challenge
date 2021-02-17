@@ -23,6 +23,6 @@
         </div>
     </div>
 </div>
-<card-component></card-component>
+
 
 @endsection

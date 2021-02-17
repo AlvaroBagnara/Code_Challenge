@@ -1864,11 +1864,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -37484,33 +37479,9 @@ var render = function() {
     _c("div", { staticClass: "row justify-content-center" }, [
       _c("div", { staticClass: "col-md-8" }, [
         _c("div", { staticClass: "card" }, [
-          _c("div", { staticClass: "card-header" }, [
-            _vm._v(_vm._s(_vm.__("Home")))
-          ]),
+          _c("div", { staticClass: "card-header" }, [_vm._v(_vm._s("Nada"))]),
           _vm._v(" "),
-          _c("div", { staticClass: "card-body" }, [
-            _vm._v(
-              "\r\n                    @if (session('status'))\r\n                        "
-            ),
-            _c(
-              "div",
-              { staticClass: "alert alert-success", attrs: { role: "alert" } },
-              [
-                _vm._v(
-                  "\r\n                            " +
-                    _vm._s(_vm.session("status")) +
-                    "\r\n                        "
-                )
-              ]
-            ),
-            _vm._v(
-              "\r\n                    @endif\r\n                    @if (session('msg'))\r\n                        " +
-                _vm._s(_vm.session("msg")) +
-                "\r\n                    @else\r\n                        " +
-                _vm._s(_vm.__("Você está logado, Seja Bem-vindo!")) +
-                "\r\n                    @endif\r\n                "
-            )
-          ])
+          _c("div", { staticClass: "card-body" })
         ])
       ])
     ])
