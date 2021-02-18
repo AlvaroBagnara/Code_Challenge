@@ -33,7 +33,7 @@
             </div>
             
         </main>
+        @include('layouts._includes._footer')
     </div>
-    @include('layouts._includes._footer')
 </body>
 </html>

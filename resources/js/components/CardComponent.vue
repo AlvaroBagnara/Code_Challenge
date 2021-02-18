@@ -1,15 +1,11 @@
 <template>
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-0 d-flex">
             <div class="card">
-                <div class="card-header">{{'Nada'}}</div>
+                <div class="card-header">{{title}}</div>
                 <div class="card-body">
-                    <!-- @if (session('msg'))
-                        {{ session('msg')}}
-                    @else
-                        {{ __('Você está logado, Seja Bem-vindo!') }}
-                    @endif -->
+                    {{msg}}
                 </div>
             </div>
         </div>
@@ -19,8 +15,9 @@
 
 <script>
     export default {
+        props: ['title','msg'],
         mounted() {
-            console.log('Component mounted.')
+            console.log('Card Component mounted.')
         }
     }
 </script>

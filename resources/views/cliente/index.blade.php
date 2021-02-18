@@ -1,19 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
+
 @if (session('msg'))
-    <div class="card-body">
-        <div class="text-center">
-            {{ session('msg')}}
-        </div>
-    </div>
+    <alert-component alert="{{session('msg')}}"></alert-component>
 @endif
-<div id="search-container" class="col-md-12">
-    <h1>Busque um Cliente</h1>
-    <form action="/cliente" method="GET">
-        <input type="text" id="search" name="search" class="form-control" placeholder="Digite o Nome do Cliente">
-    </form>
-</div>
+
+<search-component></search-component>
+
 <div id="clientes-container" class="col-md-12">
     <br>
     @if ($search)
@@ -39,39 +33,23 @@
             </div>
         </div>
         @endforeach
+
         @if (count($clientes)==0)
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-4">
-                    <div class="card">
-                        @if (count($clientes)==0 && $search)
-                        <div class="card-header">{{ __('Cliente Nao Encontrado!') }}</div>
-                        <div class="card-body">                           
-                            {{ __('Certifique-se de ter digitado certo!') }}   
-                        </div>
-                        </div>                            
-                        @else
-                        <div class="card-header">{{ __('Sem Clientes Cadastrados!') }}</div>
-                        <div class="card-body">                           
-                            {{ __('Certifique-se de ter cadastrado clientes!') }}   
-                        </div>
-                        </div> 
-                        @endif                        
-                </div>
-            </div>
-        </div>
+            @if (count($clientes)==0 && $search)
+
+            <card-component title="Cliente Não Encontrado"
+            msg="Certifique-se de ter digitado corretamente!">
+            </card-component> 
+
+            @else
+            
+            <card-component title="Sem Clientes Cadastrados"
+            msg="Certifique-se de ter cadastrado Clientes!">
+            </card-component>
+
+            @endif   
         @endif
+        
     </div>
 </div>
-
 @endsection
-
-
-<!-- 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
--->
