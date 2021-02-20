@@ -42,7 +42,7 @@ class ClienteController extends Controller
         $cliente->email = $request->email;
         $cliente->telefone = $request->telefone;
         $cliente->sexo = $request->sexo;
-/////////////////////////
+
         $endereco->logradouro = $request->logradouro;
         $endereco->bairro = $request->bairro;
         $endereco->numero = $request->numero;

@@ -6,11 +6,3 @@
     </form>
 </div>
 </template>
-
-<script>
-    export default {
-        mounted() {
-            console.log('Card Component mounted.')
-        }
-    }
-</script>

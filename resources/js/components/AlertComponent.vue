@@ -12,7 +12,7 @@
     export default {
         props: ['alert'],
         mounted() {
-            console.log('Home Component mounted.')
+            console.log('Alert Component mounted.')
         }
     }
 </script>

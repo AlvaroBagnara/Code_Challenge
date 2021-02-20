@@ -33,23 +33,24 @@
             </div>
         </div>
         @endforeach
-
-        @if (count($clientes)==0)
-            @if (count($clientes)==0 && $search)
-
-            <card-component title="Cliente Não Encontrado"
-            msg="Certifique-se de ter digitado corretamente!">
-            </card-component> 
-
-            @else
-            
-            <card-component title="Sem Clientes Cadastrados"
-            msg="Certifique-se de ter cadastrado Clientes!">
-            </card-component>
-
-            @endif   
-        @endif
-        
     </div>
 </div>
+
+
+@if (count($clientes)==0)
+    @if (count($clientes)==0 && $search)
+
+    <card-component title="Cliente Não Encontrado"
+    msg="Certifique-se de ter digitado corretamente!">
+    </card-component> 
+
+    @else
+    
+    <card-component title="Sem Clientes Cadastrados"
+    msg="Certifique-se de ter cadastrado Clientes!">
+    </card-component>
+
+    @endif   
+@endif
+
 @endsection
